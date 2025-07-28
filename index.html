@@ -1,8 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <head><title>Test</title></head>
-  <body>
-    <h1>My Schedule App</h1>
-    <p>Coming soon... ✨</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Schedule Maker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1><span id="username">Your</span>'s Schedule</h1>
+
+    <div class="input-section">
+      <label>Name: <input type="text" id="nameInput" placeholder="Your name" /></label>
+      <label>Date: <input type="date" id="dateInput" /></label>
+
+      <label>Background Color: <input type="color" id="bgColor" /></label>
+      <label>Text Color: <input type="color" id="textColor" /></label>
+      <label>Font:
+        <select id="fontSelect">
+          <option value="Arial">Arial</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Courier New">Courier New</option>
+        </select>
+      </label>
+
+      <div id="taskInputs"></div>
+      <button id="addTask">＋ Add Task</button>
+    </div>
+
+    <canvas id="scheduleCanvas" width="1080" height="1920"></canvas>
+
+    <button id="generateImage">🎨 Make Schedule</button>
+    <button id="resetAll">🔁 Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
